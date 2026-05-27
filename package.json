@@ -1,0 +1,27 @@
+{
+  "name": "gh-budget-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that exposes a get_token_budget tool for GitHub Copilot",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "gh-budget-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "format": "biome check --write .",
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["mcp", "model-context-protocol", "token-budget", "github-copilot"],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/node": "^22.13.0",
+    "typescript": "^5.7.0"
+  }
+}
